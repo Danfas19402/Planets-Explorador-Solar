@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #000, #020202);
+  color: white;
+  overflow: hidden;
+}
+
+/* LOGO */
+.logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* MENU */
+.menu {
+  position:absolute;
+  left: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu button {
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu button:hover {
+  background: orange;
+}
+
+/* CENA */
+.scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* PLANETA (AGORA INTEIRO) */
+.planet {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: repeat-x;
+
+  box-shadow:
+    inset -40px 0 60px rgba(0,0,0,0.7),
+    inset 20px 0 40px rgba(255,255,255,0.1),
+    0 0 40px rgba(255,120,50,0.2);
+
+  animation: girar 40s linear infinite;
+  margin-bottom: 30px;
+}
+
+/* TEXTURAS */
+.mercury { background-image: url('https://www.solarsystemscope.com/images/textures/full/2k_mercury.jpg'); }
+.venus { background-image: url('https://www.solarsystemscope.com/images/textures/full/2k_venus_surface.jpg'); }
+.earth { background-image: url('https://www.solarsystemscope.com/images/textures/full/2k_earth_daymap.jpg'); }
+.mars { background-image: url('https://www.solarsystemscope.com/images/textures/full/2k_mars.jpg'); }
+.jupiter { background-image: url('https://www.solarsystemscope.com/images/textures/full/2k_jupiter.jpg'); }
+.saturn { background-image: url('https://www.solarsystemscope.com/images/textures/full/2k_saturn.jpg'); }
+.uranus { background-image: url('https://www.solarsystemscope.com/images/textures/full/2k_uranus.jpg'); }
+.neptune { background-image: url('https://www.solarsystemscope.com/images/textures/full/2k_neptune.jpg'); }
+
+/* ANIMAÇÃO */
+@keyframes girar {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 0; }
+}
+
+/* INFO */
+.info {
+  text-align: center;
+  max-width: 400px;
+}
+
+.info h2 {
+  font-size: 14px;
+  opacity: 0.6;
+  letter-spacing: 4px;
+  color:rgb(173, 238, 250)
+}
+
+.info h1 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.letra{
+font-size: 20px;
+color: #f5dd06;
+}
+
+.autor{
+  font-size: 12px;
+}
